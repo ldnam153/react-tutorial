@@ -195,7 +195,7 @@ class Game extends React.Component {
           </div>
           <div style={{display:'flex', justifyContent:'space-between'}}>
             <div className="game-info" >
-              <div>Next Player: {curPlayer}</div>
+              {this.state.ended?null:<div>Next Player: {curPlayer}</div>}
               <div className="scroll-view">{moves}</div>
               <div style={{fontSize: '20px', fontWeight: 'bold'}}>{this.state.resultMessage}</div>
             </div>
