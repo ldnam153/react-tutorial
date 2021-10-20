@@ -8,8 +8,8 @@ import calculateWinner from './helper';
 class Game extends React.Component {
   constructor(props){
     super(props);
-    const row = 20;
-    const col = 20;
+    const row = 7;
+    const col = 7;
     this.state = {
       row,
       col,
@@ -70,7 +70,7 @@ class Game extends React.Component {
         if (history.length-1 >= this.state.row * this.state.col)
         {
           this.setState({
-            ended: false, 
+            ended: true, 
             board, 
             history,
             current,
