@@ -160,8 +160,9 @@ class Game extends React.Component {
   render() {
     var curPlayer = "";
     const moves = this.state.history.map((step, move) => {
+      const charLocated = step.char.char
       const desc = step.step !== 0 ?
-        'Move to (' + step.i + ',' +step.j+ ')' :
+        charLocated + ' in (' + step.i + ',' +step.j+ ')' :
         'Go to game start';
       const color = step.step === this.state.current ? 'red' : 'white' 
       if (step.step === this.state.current)
