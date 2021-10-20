@@ -8,8 +8,8 @@ import calculateWinner from './helper';
 class Game extends React.Component {
   constructor(props){
     super(props);
-    const row = 7;
-    const col = 7;
+    const row = 20;
+    const col = 20;
     this.state = {
       row,
       col,
