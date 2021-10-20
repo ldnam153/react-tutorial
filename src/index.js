@@ -97,8 +97,11 @@ class Game extends React.Component {
     const history = this.state.history;
     for(var i = 0; i < history.length; i++){
       if (history[i].step <= step){
-        history[i].char.highLight = false;
-        board[history[i].i][history[i].j] = history[i].char;
+        if(history[i].step != 0){
+          history[i].char.highLight = false;
+          board[history[i].i][history[i].j] = history[i].char;
+        }
+        
       }
       else
         board[history[i].i][history[i].j] = {char: null, highLight: false};
